@@ -9,9 +9,9 @@ docker network create dev
 
 #Reading database params
 config=`cat blog/config.py | grep MYSQL`
-password=`echo $config | grep MYSQL_ROOT_PASSWORD | sed 's/MYSQL_ROOT_PASSWORD = //g'`
-user=`echo $config | grep MYSQL_ROOT_USER | sed 's/MYSQL_ROOT_USER = //g'`
-host=`echo $config | grep MYSQL_ROOT_HOST | sed 's/MYSQL_ROOT_HOST = //g'`
+password=`echo $config | grep MYSQL_DATABASE_PASSWORD | sed 's/MYSQL_DATABASE_PASSWORD = //g'`
+user=`echo $config | grep MYSQL_DATABASE_USER | sed 's/MYSQL_DATABASE_USER = //g'`
+host=`echo $config | grep MYSQL_DATABASE_HOST | sed 's/MYSQL_DATABASE_HOST = //g'`
 
 #Creating database
 docker run -d --name sql -v `pwd`/bbdd:/docker-entrypoint-initdb.d/ \ 
