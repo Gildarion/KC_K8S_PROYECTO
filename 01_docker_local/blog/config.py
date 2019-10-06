@@ -7,6 +7,5 @@ MYSQL_DATABASE_PASSWORD = 'pruebas'
 MYSQL_DATABASE_DB = 'FlaskBlogApp'
 MYSQL_DATABASE_HOST = 'sql'
 
-
 # file upload configurations
 UPLOAD_FOLDER = 'static/Uploads'
